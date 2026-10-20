@@ -1,8 +1,20 @@
 # 🌤️ SkyCast Weather - Real-Time Live Weather App
 
+[![Live Website](https://img.shields.io/badge/Live_Website-Visit_App-0284c7?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sonampandey111.github.io/WeatherApi/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://sonampandey111.github.io/WeatherApi/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+> 🌐 **Live Demo Website:** **[https://sonampandey111.github.io/WeatherApi/](https://sonampandey111.github.io/WeatherApi/)**
+
 A modern, high-performance, and responsive Weather Application built with **React 19**, **Vite**, and **Open-Meteo Satellite Weather API**.
 
-Featuring real-time weather analytics, 5-day forecasts, atmospheric metric tracking, categorized quick-city selection (focusing on **Prayagraj**, **Uttar Pradesh**, **India Metros**, and **Global Cities**), and dynamic CSS animated backgrounds (Sun, Rain, Clouds, Thunderstorm, Snow, and Fog/Haze).
+Featuring real-time weather analytics, 5-day forecasts, atmospheric metric tracking, categorized quick-city selection (focusing on **Prayagraj**, **Uttar Pradesh**, **India Metros**, and **Global Cities**), and dynamic CSS animated backgrounds (Sun rays, Rain, Floating clouds, Thunderstorm, Snow, and Fog/Haze).
+
+---
+
+## 🔗 Live Application Link
+You can open and test the live application directly in your browser:
+👉 **[https://sonampandey111.github.io/WeatherApi/](https://sonampandey111.github.io/WeatherApi/)**
 
 ---
 
@@ -37,6 +49,7 @@ Featuring real-time weather analytics, 5-day forecasts, atmospheric metric track
 
 - **Frontend:** React 19, JavaScript (ES6+), Modern CSS3 / Glassmorphism
 - **Build Tool:** Vite 6
+- **Hosting & CI/CD:** GitHub Pages + GitHub Actions
 - **Data Source:** Open-Meteo Satellite & Geocoding APIs
 - **Icons & Graphics:** Custom lightweight responsive SVGs & CSS animations
 
