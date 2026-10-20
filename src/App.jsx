@@ -54,6 +54,16 @@ const App = () => {
   const [forecast, setForecast] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [copied, setCopied] = useState(false);
+
+  const LIVE_URL = 'https://sonampandey111.github.io/WeatherApi/';
+  const GITHUB_URL = 'https://github.com/sonampandey111/WeatherApi';
+
+  const copyLiveLink = () => {
+    navigator.clipboard.writeText(LIVE_URL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
 
   // Fetch Weather with intelligent UP/India disambiguation
   const fetchWeather = async (cityName) => {
@@ -184,19 +194,54 @@ const App = () => {
             <span>SkyCast <span className="brand-gradient">Weather Live</span></span>
           </div>
 
-          <div className="unit-toggle">
-            <button 
-              className={`unit-btn ${unit === 'C' ? 'active' : ''}`}
-              onClick={() => setUnit('C')}
+          <div className="header-actions">
+            {/* Live Web App Link Badge */}
+            <a 
+              href={LIVE_URL} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="live-badge-btn"
+              title="Open Official Live Deployed App"
             >
-              °C
-            </button>
+              <span className="pulsing-dot"></span>
+              Live Web App
+            </a>
+
+            {/* Quick Copy Link Button */}
             <button 
-              className={`unit-btn ${unit === 'F' ? 'active' : ''}`}
-              onClick={() => setUnit('F')}
+              onClick={copyLiveLink} 
+              className="copy-link-btn"
+              title="Copy public live website link"
             >
-              °F
+              {copied ? 'Copied! ✅' : '🔗 Copy Link'}
             </button>
+
+            {/* GitHub Repo Button */}
+            <a 
+              href={GITHUB_URL} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="github-link-btn"
+              title="View Source Code on GitHub"
+            >
+              ⭐ GitHub
+            </a>
+
+            {/* °C / °F Unit Toggle */}
+            <div className="unit-toggle">
+              <button 
+                className={`unit-btn ${unit === 'C' ? 'active' : ''}`}
+                onClick={() => setUnit('C')}
+              >
+                °C
+              </button>
+              <button 
+                className={`unit-btn ${unit === 'F' ? 'active' : ''}`}
+                onClick={() => setUnit('F')}
+              >
+                °F
+              </button>
+            </div>
           </div>
         </header>
 
@@ -404,7 +449,12 @@ const App = () => {
 
         {/* Footer */}
         <footer className="app-footer">
-          <p>Real-Time Weather Intelligence • Live Global Satellite Telemetry</p>
+          <div className="footer-live-box">
+            <span>🌐 <strong>Official Live Link:</strong> <a href={LIVE_URL} target="_blank" rel="noopener noreferrer" className="footer-live-link">https://sonampandey111.github.io/WeatherApi/</a></span>
+            <span>•</span>
+            <span>💻 <strong>Repository:</strong> <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="footer-github-link">github.com/sonampandey111/WeatherApi</a></span>
+          </div>
+          <p>SkyCast Real-Time Weather Intelligence • Live Global Satellite Telemetry • Developed by Sonam Pandey</p>
         </footer>
       </div>
     </>
